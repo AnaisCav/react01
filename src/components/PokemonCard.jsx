@@ -1,57 +1,36 @@
-function PokemonCard({ name, imgSrc }) {
-  return (
-    <figure>
-      {imgSrc != null ? (
-        <img src={imgSrc} alt={`Image de ${name}`} />
-      ) : (
-        <p>???</p>
-      )}
-      <figcaption>{name}</figcaption>
-    </figure>
-  );
-}
-
-// function PokemonCard({name, imgSrc}) {
-
-//   const pokemon = pokemonList[0];
+// function PokemonCard({ name, imgSrc }) {
 //   return (
 //     <figure>
-//       {pokemon.imgSrc != null ? (
-//         <img src={pokemon.imgSrc} alt={pokemon.name} />
+//       {imgSrc != null ? (
+//         <img src={imgSrc} alt={`Image de ${name}`} />
 //       ) : (
 //         <p>???</p>
 //       )}
-//       <figcaption>{pokemon.name}</figcaption>
+//       <figcaption>{name}</figcaption>
 //     </figure>
 //   );
 // }
 
-// function PokemonCard() {
-//   const pokemon = pokemonList[0];
+import PropTypes from "prop-types";
 
-//   for (let i = 0; i < pokemonList.length; i++) {
-//     if (pokemonList[i].imgSrc != undefined) {
-//       if (pokemon === pokemonList[0]) {
-//         return (
-//           <>
-//             <figure>
-//               <img src={pokemonList[i].imgSrc} alt={pokemonList[i].name}></img>
-//               <figcaption>{pokemonList[i].name}</figcaption>
-//             </figure>
-//           </>
-//         );
-//       }
-//     } else {
-//       return (
-//         <>
-//           <figure>
-//             <p>???</p>
-//             <figcaption>{pokemonList[i].name}</figcaption>
-//           </figure>
-//         </>
-//       );
-//     }
-//   }
-// }
+function PokemonCard({ pokemon }) {
+  return (
+    <figure>
+      {pokemon.imgSrc != null ? (
+        <img src={pokemon.imgSrc} alt={`Image de ${pokemon.name}`} />
+      ) : (
+        <p>???</p>
+      )}
+      <figcaption>{pokemon.name}</figcaption>
+    </figure>
+  );
+}
+
+PokemonCard.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.any.isRequired,
+  }).isRequired,
+};
 
 export default PokemonCard;

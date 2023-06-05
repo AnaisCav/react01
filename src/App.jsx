@@ -18,10 +18,20 @@ const App = () => {
   return (
     <>
       <div>
-        <PokemonCard name={pokemon.name} imgSrc={pokemon.imgSrc} />
+        <PokemonCard pokemon={pokemon} />
       </div>
     </>
   );
 };
+
+// const App = () => {
+//   return (
+//     <>
+//       <div>
+//         <PokemonCard name={pokemon.name} imgSrc={pokemon.imgSrc} />
+//       </div>
+//     </>
+//   );
+// };
 
 export default App;
