@@ -24,14 +24,4 @@ const App = () => {
   );
 };
 
-// const App = () => {
-//   return (
-//     <>
-//       <div>
-//         <PokemonCard name={pokemon.name} imgSrc={pokemon.imgSrc} />
-//       </div>
-//     </>
-//   );
-// };
-
 export default App;
