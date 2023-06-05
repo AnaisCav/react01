@@ -11,7 +11,7 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react-refresh/only-export-components": "warn",
-    "react/props-validation": false,
+    "react/props-validation": 0,
     "react/prop-types": 0,
   },
 };
