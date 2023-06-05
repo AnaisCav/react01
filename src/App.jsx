@@ -36,7 +36,7 @@ const App = () => {
     <>
       <div>
         <PokemonCard pokemon={pokemonList[index]} />
-        <NavBar setIndex={setIndex} />
+        <NavBar index={index} setIndex={setIndex} pokemonList={pokemonList} />
       </div>
     </>
   );
