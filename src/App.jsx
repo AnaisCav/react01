@@ -28,15 +28,16 @@ const pokemonList = [
     name: "Mew",
   },
 ];
+alert("Hello Pokemon Trainer 😃 !");
 
 const App = () => {
-  const [pokemonIndex, setPokemonIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   return (
     <>
       <div>
-        <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-        <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
+        <PokemonCard pokemon={pokemonList[index]} />
+        <NavBar index={index} setIndex={setIndex} pokemonList={pokemonList} />
       </div>
     </>
   );
