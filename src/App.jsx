@@ -28,7 +28,6 @@ const pokemonList = [
     name: "Mew",
   },
 ];
-alert("Hello Pokemon Trainer 😃 !");
 
 const App = () => {
   const [index, setIndex] = useState(0);
