@@ -1,14 +1,16 @@
-const NavBar = ({ index, setIndex, pokemonList }) => {
-  const increaseIndex = () => {
-    setIndex(index + 1);
+const NavBar = ({ pokemonIndex, setPokemonIndex, pokemonList }) => {
+  const changeIndex = () => {
+    setPokemonIndex(pokemonIndex);
   };
-  const decreaseIndex = () => {
-    setIndex(index - 1);
-  };
+
+  //prettier-ignore
   return (
     <nav>
-      <button onClick={decreaseIndex}>Précédent</button>
-      <button onClick={increaseIndex}>Suivant</button>
+      {pokemonList.map((pokemons, index) => (
+        <button onClick={changeIndex} key={index}>
+          {pokemons.name}
+        </button>
+      ))}
     </nav>
   );
 };
