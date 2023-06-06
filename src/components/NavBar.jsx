@@ -7,8 +7,10 @@ const NavBar = ({ index, setIndex, pokemonList }) => {
   };
   return (
     <nav>
-      <button onClick={decreaseIndex}>Précédent</button>
-      <button onClick={increaseIndex}>Suivant</button>
+      {index > 0 && <button onClick={decreaseIndex}>Précédent</button>}
+      {index < pokemonList.length - 1 && (
+        <button onClick={increaseIndex}>Suivant</button>
+      )}
     </nav>
   );
 };
