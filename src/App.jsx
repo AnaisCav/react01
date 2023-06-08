@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
+import styled from "styled-components";
 
 const pokemonList = [
   {
@@ -29,15 +30,21 @@ const pokemonList = [
   },
 ];
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const App = () => {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
   return (
     <>
-      <div>
+      <Container>
         <PokemonCard pokemon={pokemonList[pokemonIndex]} />
         <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
-      </div>
+      </Container>
     </>
   );
 };
